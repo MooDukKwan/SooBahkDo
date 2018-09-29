@@ -3,10 +3,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { InicioPage } from '../pages/inicio/inicio';
 
 import { PresentacionPage } from '../pages/presentacion/presentacion';
 import { WorldMooDukKwanPage } from '../pages/worldMooDukKwan/worldMooDukKwan';
+import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +17,7 @@ export class MyApp {
 
   // Declaración de variables
   text: string = "";
-  rootPage: any = HomePage;
+  rootPage: any = InicioPage;
   pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
@@ -24,9 +25,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Inicio', component: HomePage },
+      { title: 'Inicio', component: InicioPage },
       { title: 'Presentación', component: PresentacionPage },
-      { title: 'World Moo Duk Kwan', component: WorldMooDukKwanPage }
+      { title: 'World Moo Duk Kwan', component: WorldMooDukKwanPage },
+      { title: 'Soo Bahk Do', component: SooBahkDoPage }
     ];
 
   }

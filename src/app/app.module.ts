@@ -3,11 +3,12 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { InicioPage } from '../pages/inicio/inicio';
 
 // Mis paginas
 import { PresentacionPage } from '../pages/presentacion/presentacion';
 import { WorldMooDukKwanPage } from '../pages/worldMooDukKwan/worldMooDukKwan';
+import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,9 +16,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    InicioPage,
     PresentacionPage,
-    WorldMooDukKwanPage
+    WorldMooDukKwanPage,
+    SooBahkDoPage
   ],
   imports: [
     BrowserModule,
@@ -26,9 +28,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    InicioPage,
     PresentacionPage,
-    WorldMooDukKwanPage
+    WorldMooDukKwanPage,
+    SooBahkDoPage
   ],
   providers: [
     StatusBar,
