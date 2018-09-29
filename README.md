@@ -35,6 +35,21 @@ nombreOpcionMenu.ts
 	    }
 	}
 
+nombreOpcionMenu.html
+	<!-- Esqueleto básico -->
+	<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>TITULO</ion-title>
+	</ion-navbar>
+	</ion-header>
+
+	<ion-content padding id="contenido">
+	<!-- Titulo y contenido -->
+	</ion-content>
+
 app.module.ts
 	a) Crear: import { NombreOpcionMenu } from 'ruta de la pagina';
 	import { IntroduccionPage } from '../pages/introduccion/introduccion';
@@ -49,3 +64,4 @@ app.component.ts
 	
 	b) Añadir la pagina al array: {title: 'titulo', component: 'NombreOpcionMenu del import'}
 	{ title: 'Introduccion', component: IntroduccionPage }
+
