@@ -11,6 +11,7 @@ import { WorldMooDukKwanPage } from '../pages/worldMooDukKwan/worldMooDukKwan';
 import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
 import { CincoValoresMooDoPage } from '../pages/cincoValoresMooDo/cincoValoresMooDo';
 import { MisionDosMilPage } from '../pages/misionDosMil/misionDosMil';
+import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConceptosClaves';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SooBahkDoPage,
     CincoValoresMooDoPage,
     MisionDosMilPage,
+    OchoConceptosClavesPage,
+
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SooBahkDoPage,
     CincoValoresMooDoPage,
     MisionDosMilPage,
+    OchoConceptosClavesPage,
   ],
   providers: [
     StatusBar,
