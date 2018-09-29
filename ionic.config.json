@@ -1,0 +1,7 @@
+{
+  "name": "SooBahkDo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
