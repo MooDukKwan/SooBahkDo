@@ -8,6 +8,7 @@ import { InicioPage } from '../pages/inicio/inicio';
 import { PresentacionPage } from '../pages/presentacion/presentacion';
 import { WorldMooDukKwanPage } from '../pages/worldMooDukKwan/worldMooDukKwan';
 import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
+import { CincoValoresMooDoPage } from '../pages/cincoValoresMooDo/cincoValoresMooDo';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +29,8 @@ export class MyApp {
       { title: 'Inicio', component: InicioPage },
       { title: 'Presentación', component: PresentacionPage },
       { title: 'World Moo Duk Kwan', component: WorldMooDukKwanPage },
-      { title: 'Soo Bahk Do', component: SooBahkDoPage }
+      { title: 'Soo Bahk Do', component: SooBahkDoPage },
+      { title: '5 Valores Moo Do', component: CincoValoresMooDoPage }
     ];
 
   }

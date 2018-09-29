@@ -9,6 +9,7 @@ import { InicioPage } from '../pages/inicio/inicio';
 import { PresentacionPage } from '../pages/presentacion/presentacion';
 import { WorldMooDukKwanPage } from '../pages/worldMooDukKwan/worldMooDukKwan';
 import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
+import { CincoValoresMooDoPage } from '../pages/cincoValoresMooDo/cincoValoresMooDo';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     InicioPage,
     PresentacionPage,
     WorldMooDukKwanPage,
-    SooBahkDoPage
+    SooBahkDoPage,
+    CincoValoresMooDoPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     InicioPage,
     PresentacionPage,
     WorldMooDukKwanPage,
-    SooBahkDoPage
+    SooBahkDoPage,
+    CincoValoresMooDoPage
   ],
   providers: [
     StatusBar,
