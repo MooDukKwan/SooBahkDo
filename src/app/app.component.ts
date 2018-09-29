@@ -12,6 +12,7 @@ import { CincoValoresMooDoPage } from '../pages/cincoValoresMooDo/cincoValoresMo
 import { MisionDosMilPage } from '../pages/misionDosMil/misionDosMil';
 import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConceptosClaves';
 import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
+import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 
 @Component({
   templateUrl: 'app.html'
@@ -37,6 +38,7 @@ export class MyApp {
       { title: 'Misión 2000', component: MisionDosMilPage },
       { title: '8 Conceptos Clave', component: OchoConceptosClavesPage },
       { title: '10 Códigos de Fe', component: DiezCodigosFePage },
+      { title: 'Sip Sam Se', component: SipSamSePage }
     ];
 
   }
