@@ -11,6 +11,7 @@ import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
 import { CincoValoresMooDoPage } from '../pages/cincoValoresMooDo/cincoValoresMooDo';
 import { MisionDosMilPage } from '../pages/misionDosMil/misionDosMil';
 import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConceptosClaves';
+import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
 
 @Component({
   templateUrl: 'app.html'
@@ -34,7 +35,8 @@ export class MyApp {
       { title: 'Soo Bahk Do', component: SooBahkDoPage },
       { title: '5 Valores Moo Do', component: CincoValoresMooDoPage },
       { title: 'Misión 2000', component: MisionDosMilPage },
-      { title: '8 Conceptos Clave', component: OchoConceptosClavesPage}
+      { title: '8 Conceptos Clave', component: OchoConceptosClavesPage },
+      { title: '10 Códigos de Fe', component: DiezCodigosFePage },
     ];
 
   }

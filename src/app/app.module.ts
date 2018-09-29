@@ -12,6 +12,7 @@ import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
 import { CincoValoresMooDoPage } from '../pages/cincoValoresMooDo/cincoValoresMooDo';
 import { MisionDosMilPage } from '../pages/misionDosMil/misionDosMil';
 import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConceptosClaves';
+import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CincoValoresMooDoPage,
     MisionDosMilPage,
     OchoConceptosClavesPage,
-
+    DiezCodigosFePage
   ],
   imports: [
     BrowserModule,
@@ -42,6 +43,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CincoValoresMooDoPage,
     MisionDosMilPage,
     OchoConceptosClavesPage,
+    DiezCodigosFePage
   ],
   providers: [
     StatusBar,

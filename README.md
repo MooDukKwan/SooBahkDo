@@ -46,7 +46,7 @@ nombreOpcionMenu.html
 	</ion-navbar>
 	</ion-header>
 
-	<ion-content padding id="contenido">
+	<ion-content padding class="contenido">
 	<!-- Titulo y contenido -->
 	</ion-content>
 
