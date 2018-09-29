@@ -5,9 +5,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-
 // Mis paginas
 import { PresentacionPage } from '../pages/presentacion/presentacion';
+import { WorldMooDukKwanPage } from '../pages/worldMooDukKwan/worldMooDukKwan';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +16,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    PresentacionPage
+    PresentacionPage,
+    WorldMooDukKwanPage
   ],
   imports: [
     BrowserModule,
@@ -26,12 +27,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    PresentacionPage
+    PresentacionPage,
+    WorldMooDukKwanPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
