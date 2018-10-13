@@ -9,7 +9,7 @@ Manual de artes marciales
 
 2) Dentro dela carpeta, crear 3 archivos en formato: "nombreOpcionMenu.html", "nombreOpcionMenu.scss" y "nombreOpcionMenu.ts"
 
-RUTA FINAL
+RUTA FINAL:
 
 -src
    |-pages
