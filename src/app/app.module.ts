@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
+// COMPONENTE
 import { MyApp } from './app.component';
-import { InicioPage } from '../pages/inicio/inicio';
 
 // Mis paginas
+import { InicioPage } from '../pages/inicio/inicio';
 import { PresentacionPage } from '../pages/presentacion/presentacion';
 import { WorldMooDukKwanPage } from '../pages/worldMooDukKwan/worldMooDukKwan';
 import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
@@ -15,8 +18,8 @@ import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConcep
 import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
 import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+// Componente Subpagina
+import { TecnicasComponent } from '../pages/tecnicas/tecnicas.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MisionDosMilPage,
     OchoConceptosClavesPage,
     DiezCodigosFePage,
-    SipSamSePage
+    SipSamSePage,
+    TecnicasComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MisionDosMilPage,
     OchoConceptosClavesPage,
     DiezCodigosFePage,
-    SipSamSePage
+    SipSamSePage,
+    TecnicasComponent
   ],
   providers: [
     StatusBar,

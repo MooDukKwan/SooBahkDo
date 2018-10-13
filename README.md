@@ -28,7 +28,7 @@ nombreOpcionMenu.ts
 	    templateUrl: "nombreOpcionMenu.html" // Diseño HTML
 	})
 
-	export class NombreOpcionMenu {
+	export class NombreOpcionMenuPage {
 	    // Variables globales
 
 	    constructor(public navCtrl: NavController, public navParams: NavParams) {

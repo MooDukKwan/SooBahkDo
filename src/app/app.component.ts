@@ -3,8 +3,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// Mis paginas
 import { InicioPage } from '../pages/inicio/inicio';
-
 import { PresentacionPage } from '../pages/presentacion/presentacion';
 import { WorldMooDukKwanPage } from '../pages/worldMooDukKwan/worldMooDukKwan';
 import { SooBahkDoPage } from '../pages/sooBahkDo/sooBahkDo';
@@ -14,6 +14,9 @@ import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConcep
 import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
 import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 
+// Componente Subpaginas
+import { TecnicasComponent } from '../pages/tecnicas/tecnicas.component';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -21,7 +24,6 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // Declaración de variables
-  text: string = "";
   rootPage: any = InicioPage;
   pages: Array<{ title: string, component: any }>;
 
@@ -38,7 +40,8 @@ export class MyApp {
       { title: 'Misión 2000', component: MisionDosMilPage },
       { title: '8 Conceptos Clave', component: OchoConceptosClavesPage },
       { title: '10 Códigos de Fe', component: DiezCodigosFePage },
-      { title: 'Sip Sam Se', component: SipSamSePage }
+      { title: 'Sip Sam Se', component: SipSamSePage },
+      { title: 'Técnicas', component: TecnicasComponent } // Subpagina
     ];
 
   }
@@ -56,9 +59,5 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
-  }
-
-  rightMenuClick(text) {
-    this.text = text;
   }
 }
