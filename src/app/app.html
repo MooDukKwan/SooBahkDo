@@ -29,12 +29,14 @@
       <ion-list id="sidenav">
         <button ion-item (click)="menuItemHandler()">
           Cinturón blanco
-          <ion-item-group submenu [class.visible]="showSubmenu">
-            <button menuClose="rightMenu" ion-item *ngFor="let p of pagesRight" [class.activeHighlight]="checkActive(p)" (click)="openPage(p)">
-              {{p.title}}
-            </button>
-          </ion-item-group>
         </button>
+        <ion-item-group submenu [class.visible]="showSubmenu">
+            
+          <button menuClose="rightMenu" ion-item *ngFor="let p of pagesRight" [class.activeHighlight]="checkActive(p)"
+            (click)="openPage(p)">
+            {{p.title}}
+          </button>
+        </ion-item-group>
       </ion-list>
     </ion-content>
   </ion-menu>

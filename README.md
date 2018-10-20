@@ -1,9 +1,8 @@
 # SooBahkDo
 Manual de artes marciales
 
-################
-## CREAR MENU ##
-################
+
+# CREAR MENU 
 
 1) En la ruta ".\src\pages" crear carpeta con el "nombreOpcionMenu".
 

@@ -14,6 +14,10 @@ import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConcep
 import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
 import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 
+// Subpaginas
+import { MooPalDanKumPage } from '../pages/subpages/mooPalDanKum/mooPalDanKum';
+import { KiChoSooGuiPage } from '../pages/subpages/kiChoSooGui/kiChoSooGui';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -28,7 +32,7 @@ export class MyApp {
   activePageRight: any;
 
   showSubmenu: boolean = false;
-  
+
   password: string = "";
   passwordValue: boolean = false;
 
@@ -49,7 +53,8 @@ export class MyApp {
     ];
 
     this.pagesRight = [
-      
+      { title: 'Moo Pal Dan Kum', component: MooPalDanKumPage },
+      { title: 'Ki Cho Soo Gui', component: KiChoSooGuiPage }
     ];
 
     this.activePageLeft = this.pagesLeft[0];
@@ -85,7 +90,7 @@ export class MyApp {
     this.showSubmenu = !this.showSubmenu;
   }
 
-  
+
   authenticated() {
     return this.passwordValue;
   }
