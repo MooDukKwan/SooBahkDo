@@ -1,34 +1,54 @@
-<ion-menu id="leftMenu" [content]="content" side="left" type="overlay">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Teoría</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div *ngIf="true; else requestPassword">
+  <!-- MENU IZQUIERDO -->
+  <ion-menu id="leftMenu" [content]="content" side="left" type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Teoría</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose="leftMenu" ion-item *ngFor="let p of pagesLeft" [class.activeHighlight]="checkActive(p)" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
-</ion-menu>
+    <ion-content>
+      <ion-list>
+        <button menuClose="leftMenu" ion-item *ngFor="let p of pagesLeft" [class.activeHighlight]="checkActive(p)"
+          (click)="openPage(p)">
+          {{p.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-<ion-menu id="rightMenu" [content]="content" side="right" type="overlay">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title style="text-align: center">Técnicas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- MENU DERECHO -->
+  <ion-menu id="rightMenu" [content]="content" side="right" type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="text-align: center">Técnicas</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose="rightMenu" ion-item *ngFor="let p of pagesRight" [class.activeHighlight]="checkActive(p)" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
-</ion-menu>
+    <ion-content>
+      <ion-list id="sidenav">
+        <button ion-item (click)="menuItemHandler()">
+          Cinturón blanco
+          <ion-item-group submenu [class.visible]="showSubmenu">
+            <button menuClose="rightMenu" ion-item *ngFor="let p of pagesRight" [class.activeHighlight]="checkActive(p)" (click)="openPage(p)">
+              {{p.title}}
+            </button>
+          </ion-item-group>
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+</div>
+
+<ng-template #requestPassword>
+  <form (ngSubmit)="checkPassword()">
+    <ion-item>
+      <ion-label color="primary" stacked>Stacked Label</ion-label>
+      <ion-input name="password" [(ngModel)]="password" type="password" placeholder="Password Input"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Aceptar</button>
+  </form>
+</ng-template>

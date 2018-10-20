@@ -27,6 +27,11 @@ export class MyApp {
   activePageLeft: any;
   activePageRight: any;
 
+  showSubmenu: boolean = false;
+  
+  password: string = "";
+  passwordValue: boolean = false;
+
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
@@ -44,15 +49,7 @@ export class MyApp {
     ];
 
     this.pagesRight = [
-      { title: 'Inicio', component: InicioPage },
-      { title: 'Presentación', component: PresentacionPage },
-      { title: 'World Moo Duk Kwan', component: WorldMooDukKwanPage },
-      { title: 'Soo Bahk Do', component: SooBahkDoPage },
-      { title: '5 Valores Moo Do', component: CincoValoresMooDoPage },
-      { title: 'Misión 2000', component: MisionDosMilPage },
-      { title: '8 Conceptos Clave', component: OchoConceptosClavesPage },
-      { title: '10 Códigos de Fe', component: DiezCodigosFePage },
-      { title: 'Sip Sam Se', component: SipSamSePage }
+      
     ];
 
     this.activePageLeft = this.pagesLeft[0];
@@ -71,8 +68,8 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
-    //this.activePageLeft = page;
-    //this.activePageRight = page;
+    this.activePageLeft = page;
+    this.activePageRight = page;
   }
 
   checkActive(page) {
@@ -81,6 +78,21 @@ export class MyApp {
       return page;
     } else {
       return page == this.activePageRight;
+    }
+  }
+
+  menuItemHandler(): void {
+    this.showSubmenu = !this.showSubmenu;
+  }
+
+  
+  authenticated() {
+    return this.passwordValue;
+  }
+
+  checkPassword() {
+    if (this.password == "admin") {
+      this.passwordValue = true;
     }
   }
 }

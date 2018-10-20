@@ -17,6 +17,21 @@
 
 @import "../theme/icons.scss";
 
+/* SUBMENU */
+#sidenav {
+  ion-item-group[submenu] {
+    overflow: hidden;
+    display: block;
+    height: 0;
+    transition: height .3s linear;
+    padding-left: 20%;
+    &.visible {
+        height: inherit;
+        // this is just sample value, calculate how much space you need for your menu items
+    }
+  }
+}
+/* END SUBMENU */
 
 .activeHighlight{
   background-color: map-get($map: $colors, $key: dark-light);
