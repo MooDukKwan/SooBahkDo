@@ -1,13 +1,29 @@
-<ion-menu [content]="content">
+<ion-menu id="leftMenu" [content]="content" side="left" type="overlay">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Índice</ion-title>
+      <ion-title>Teoría</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button menuClose="leftMenu" ion-item *ngFor="let p of pagesLeft" [class.activeHighlight]="checkActive(p)" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-menu id="rightMenu" [content]="content" side="right" type="overlay">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title style="text-align: center">Técnicas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose="rightMenu" ion-item *ngFor="let p of pagesRight" [class.activeHighlight]="checkActive(p)" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>

@@ -14,9 +14,6 @@ import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConcep
 import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
 import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 
-// Componente Subpaginas
-import { TecnicasComponent } from '../pages/tecnicas/tecnicas.component';
-
 @Component({
   templateUrl: 'app.html'
 })
@@ -25,13 +22,16 @@ export class MyApp {
 
   // Declaración de variables
   rootPage: any = InicioPage;
-  pages: Array<{ title: string, component: any }>;
+  pagesLeft: Array<{ title: string, component: any }>;
+  pagesRight: Array<{ title: string, component: any }>;
+  activePageLeft: any;
+  activePageRight: any;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
+    this.pagesLeft = [
       { title: 'Inicio', component: InicioPage },
       { title: 'Presentación', component: PresentacionPage },
       { title: 'World Moo Duk Kwan', component: WorldMooDukKwanPage },
@@ -40,10 +40,22 @@ export class MyApp {
       { title: 'Misión 2000', component: MisionDosMilPage },
       { title: '8 Conceptos Clave', component: OchoConceptosClavesPage },
       { title: '10 Códigos de Fe', component: DiezCodigosFePage },
-      { title: 'Sip Sam Se', component: SipSamSePage },
-      { title: 'Técnicas', component: TecnicasComponent } // Subpagina
+      { title: 'Sip Sam Se', component: SipSamSePage }
     ];
 
+    this.pagesRight = [
+      { title: 'Inicio', component: InicioPage },
+      { title: 'Presentación', component: PresentacionPage },
+      { title: 'World Moo Duk Kwan', component: WorldMooDukKwanPage },
+      { title: 'Soo Bahk Do', component: SooBahkDoPage },
+      { title: '5 Valores Moo Do', component: CincoValoresMooDoPage },
+      { title: 'Misión 2000', component: MisionDosMilPage },
+      { title: '8 Conceptos Clave', component: OchoConceptosClavesPage },
+      { title: '10 Códigos de Fe', component: DiezCodigosFePage },
+      { title: 'Sip Sam Se', component: SipSamSePage }
+    ];
+
+    this.activePageLeft = this.pagesLeft[0];
   }
 
   initializeApp() {
@@ -59,5 +71,16 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+    //this.activePageLeft = page;
+    //this.activePageRight = page;
+  }
+
+  checkActive(page) {
+    // https://www.joshmorony.com/create-a-menu-with-active-page-highlight-in-ionic-2/
+    if (page == this.activePageLeft) {
+      return page;
+    } else {
+      return page == this.activePageRight;
+    }
   }
 }

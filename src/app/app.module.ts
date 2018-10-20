@@ -18,9 +18,6 @@ import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConcep
 import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
 import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 
-// Componente Subpagina
-import { TecnicasComponent } from '../pages/tecnicas/tecnicas.component';
-
 @NgModule({
   declarations: [
     MyApp,
@@ -32,8 +29,7 @@ import { TecnicasComponent } from '../pages/tecnicas/tecnicas.component';
     MisionDosMilPage,
     OchoConceptosClavesPage,
     DiezCodigosFePage,
-    SipSamSePage,
-    TecnicasComponent
+    SipSamSePage
   ],
   imports: [
     BrowserModule,
@@ -50,8 +46,7 @@ import { TecnicasComponent } from '../pages/tecnicas/tecnicas.component';
     MisionDosMilPage,
     OchoConceptosClavesPage,
     DiezCodigosFePage,
-    SipSamSePage,
-    TecnicasComponent
+    SipSamSePage
   ],
   providers: [
     StatusBar,

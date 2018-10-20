@@ -1,9 +1,12 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+    <ion-title style="text-align: center">Soo Bahk Do</ion-title>
+    <button ion-button start menuToggle="leftMenu">
+      <ion-icon name="list"></ion-icon>
     </button>
-    <ion-title>Menu</ion-title>
+    <button ion-button end menuToggle="rightMenu">
+      <ion-icon name="globe"></ion-icon>
+    </button>
   </ion-navbar>
 </ion-header>
 
@@ -21,6 +24,6 @@
   <pre class="piePagina">World Moo Duk Kwan Korean Soo Bahk Do
 Euro Soo Bahk Do Tang Soo Do Moo Du Kwan Federation
 Asociación Española de Soo Bahk Do Tang Soo Do Moo Duk Kwan</pre>
-
+ <!-- https://yannbraga.com/2017/06/28/how-to-use-custom-icons-on-ionic-3/ -->
   <!--<button ion-button secondary menuToggle>Abrir índice o pulsar sobre "<ion-icon name="menu"></ion-icon>" </button>-->
 </ion-content>
