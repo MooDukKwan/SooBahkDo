@@ -22,8 +22,18 @@ import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 import { SideMenuContentComponent } from '../side-menu-content/side-menu-content.component';
 
 // Subpaginas
-import { MooPalDanKumPage } from '../pages/_subpages/mooPalDanKum/mooPalDanKum';
-import { KiChoSooGuiPage } from '../pages/_subpages/kiChoSooGui/kiChoSooGui';
+import { DecimoGupPage } from '../pages/_subpages/cinturonBlanco/decimoGup/decimoGup';
+import { NovenoGupPage } from '../pages/_subpages/cinturonBlanco/novenoGup/novenoGup';
+import { OctavoGupPage } from '../pages/_subpages/cinturonBlanco/octavoGup/octavoGup';
+import { SeptimoGupPage } from '../pages/_subpages/cinturonBlanco/septimoGup/septimoGup';
+import { SextoGupPage } from '../pages/_subpages/cinturonVerde/sextoGup/SextoGup';
+import { QuintoGupPage } from '../pages/_subpages/cinturonVerde/quintoGup/quintoGup';
+import { CuartoGupPage } from '../pages/_subpages/cinturonVerde/cuartoGup/cuartoGup';
+import { TerceroGupPage } from '../pages/_subpages/cinturonRojo/terceroGup/terceroGup';
+import { SegundoGupPage } from '../pages/_subpages/cinturonRojo/segundoGup/segundoGup';
+import { PrimerGupPage } from '../pages/_subpages/cinturonRojo/primerGup/primerGup';
+import { PrimerDanPage } from  '../pages/_subpages/cinturonAzul/primerDan/primerDan';
+
 
 @NgModule({
   declarations: [
@@ -39,8 +49,17 @@ import { KiChoSooGuiPage } from '../pages/_subpages/kiChoSooGui/kiChoSooGui';
     DiezCodigosFePage,
     SipSamSePage,
     // SUBPAGINA
-    MooPalDanKumPage,
-    KiChoSooGuiPage
+    DecimoGupPage,
+    NovenoGupPage,
+    OctavoGupPage,
+    SeptimoGupPage,
+    SextoGupPage,
+    QuintoGupPage,
+    CuartoGupPage,
+    TerceroGupPage,
+    SegundoGupPage,
+    PrimerGupPage,
+    PrimerDanPage
   ],
   imports: [
     BrowserModule,
@@ -59,8 +78,17 @@ import { KiChoSooGuiPage } from '../pages/_subpages/kiChoSooGui/kiChoSooGui';
     DiezCodigosFePage,
     SipSamSePage,
     // SUBPAGINA
-    MooPalDanKumPage,
-    KiChoSooGuiPage
+    DecimoGupPage,
+    NovenoGupPage,
+    OctavoGupPage,
+    SeptimoGupPage,
+    SextoGupPage,
+    QuintoGupPage,
+    CuartoGupPage,
+    TerceroGupPage,
+    SegundoGupPage,
+    PrimerGupPage,
+    PrimerDanPage
   ],
   providers: [
     StatusBar,

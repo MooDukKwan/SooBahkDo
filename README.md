@@ -23,7 +23,7 @@ nombreOpcionMenu.ts
 	import { NavController, NavParams } from 'ionic-angular';
 
 	@Component({
-	    selector: "page-list", // Estilos del archivo SCSS
+	    selector: "page-home", // Estilos del archivo SCSS
 	    templateUrl: "nombreOpcionMenu.html" // Diseño HTML
 	})
 
@@ -37,12 +37,15 @@ nombreOpcionMenu.ts
 nombreOpcionMenu.html
 	<!-- Esqueleto básico -->
 	<ion-header>
-	<ion-navbar>
-		<button ion-button menuToggle>
-		<ion-icon name="menu"></ion-icon>
-		</button>
-		<ion-title>TITULO</ion-title>
-	</ion-navbar>
+		<ion-navbar>
+			<ion-title style="text-align: center">Soo Bahk Do</ion-title>
+			<button ion-button start menuToggle="leftMenu">
+				<ion-icon name="Book"></ion-icon>
+			</button>
+			<button ion-button end menuToggle="rightMenu">
+				<ion-icon name="Karate"></ion-icon>
+			</button>
+		</ion-navbar>
 	</ion-header>
 
 	<ion-content padding class="contenido">

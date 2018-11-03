@@ -16,12 +16,22 @@ import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 
 // Submenu
 import { SideMenuContentComponent } from '../side-menu-content/side-menu-content.component';
-
-// Subpaginas
-import { MooPalDanKumPage } from '../pages/_subpages/mooPalDanKum/mooPalDanKum';
-import { KiChoSooGuiPage } from '../pages/_subpages/kiChoSooGui/kiChoSooGui';
 import { SideMenuOption } from '../side-menu-content/models/side-menu-option';
 import { SideMenuSettings } from '../side-menu-content/models/side-menu-settings';
+
+// Subpaginas
+import { DecimoGupPage } from '../pages/_subpages/cinturonBlanco/decimoGup/decimoGup';
+import { NovenoGupPage } from '../pages/_subpages/cinturonBlanco/novenoGup/novenoGup';
+import { OctavoGupPage } from '../pages/_subpages/cinturonBlanco/octavoGup/octavoGup';
+import { SeptimoGupPage } from '../pages/_subpages/cinturonBlanco/septimoGup/septimoGup';
+import { SextoGupPage } from '../pages/_subpages/cinturonVerde/sextoGup/SextoGup';
+import { QuintoGupPage } from '../pages/_subpages/cinturonVerde/quintoGup/quintoGup';
+import { CuartoGupPage } from '../pages/_subpages/cinturonVerde/cuartoGup/cuartoGup';
+import { TerceroGupPage } from '../pages/_subpages/cinturonRojo/terceroGup/terceroGup';
+import { SegundoGupPage } from '../pages/_subpages/cinturonRojo/segundoGup/segundoGup';
+import { PrimerGupPage } from '../pages/_subpages/cinturonRojo/primerGup/primerGup';
+import { PrimerDanPage } from  '../pages/_subpages/cinturonAzul/primerDan/primerDan';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -92,19 +102,19 @@ export class MyApp {
       suboptions: [
         {
           displayText: '10º GUP',
-          component: MooPalDanKumPage
+          component: DecimoGupPage
         },
         {
           displayText: '9º GUP',
-          component: KiChoSooGuiPage
+          component: NovenoGupPage
         },
         {
           displayText: '8º GUP',
-          component: KiChoSooGuiPage
+          component: OctavoGupPage
         },
         {
           displayText: '7º GUP',
-          component: KiChoSooGuiPage
+          component: SeptimoGupPage
         }
       ]
     });
@@ -113,15 +123,15 @@ export class MyApp {
       suboptions: [
         {
           displayText: '6º GUP',
-          component: MooPalDanKumPage
+          component: SextoGupPage
         },
         {
           displayText: '5º GUP',
-          component: KiChoSooGuiPage
+          component: QuintoGupPage
         },
         {
           displayText: '4º GUP',
-          component: KiChoSooGuiPage
+          component: CuartoGupPage
         }
       ]
     });
@@ -130,15 +140,15 @@ export class MyApp {
       suboptions: [
         {
           displayText: '3º GUP',
-          component: MooPalDanKumPage
+          component: TerceroGupPage
         },
         {
           displayText: '2º GUP',
-          component: KiChoSooGuiPage
+          component: SegundoGupPage
         },
         {
           displayText: '1º GUP',
-          component: KiChoSooGuiPage
+          component: PrimerGupPage
         }
       ]
     });
@@ -146,8 +156,8 @@ export class MyApp {
       displayText: 'Cinturón azul',
       suboptions: [
         {
-          displayText: 'Dojang',
-          component: KiChoSooGuiPage
+          displayText: '1º Dan',
+          component: PrimerDanPage
         }
       ]
     });
