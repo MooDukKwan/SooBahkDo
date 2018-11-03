@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, Injector } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,13 +18,17 @@ import { OchoConceptosClavesPage } from '../pages/ochoConceptosClaves/ochoConcep
 import { DiezCodigosFePage } from '../pages/diezCodigosFe/diezCodigosFe';
 import { SipSamSePage } from '../pages/sipSamSe/sipSamSe';
 
+// Submenu
+import { SideMenuContentComponent } from '../side-menu-content/side-menu-content.component';
+
 // Subpaginas
-import { MooPalDanKumPage } from '../pages/subpages/mooPalDanKum/mooPalDanKum';
-import { KiChoSooGuiPage } from '../pages/subpages/kiChoSooGui/kiChoSooGui';
+import { MooPalDanKumPage } from '../pages/_subpages/mooPalDanKum/mooPalDanKum';
+import { KiChoSooGuiPage } from '../pages/_subpages/kiChoSooGui/kiChoSooGui';
 
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp, // Principal
+    SideMenuContentComponent, // Submenu
     InicioPage,
     PresentacionPage,
     WorldMooDukKwanPage,
@@ -64,4 +68,9 @@ import { KiChoSooGuiPage } from '../pages/subpages/kiChoSooGui/kiChoSooGui';
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule { }
+export class AppModule {
+  static injector: Injector;
+  constructor(injector: Injector) {
+    AppModule.injector = injector;
+  }
+}

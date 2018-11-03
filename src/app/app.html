@@ -18,7 +18,7 @@
   </ion-menu>
 
   <!-- MENU DERECHO -->
-  <ion-menu id="rightMenu" [content]="content" side="right" type="overlay">
+  <ion-menu id="rightMenu" [content]="content" (ionClose)="collapseMenuOptions()" side="right" type="overlay">
     <ion-header>
       <ion-toolbar>
         <ion-title style="text-align: center">Técnicas</ion-title>
@@ -26,6 +26,7 @@
     </ion-header>
 
     <ion-content>
+      <!--
       <ion-list id="sidenav">
         <button ion-item (click)="menuItemHandler()">
           Cinturón blanco
@@ -37,7 +38,8 @@
             {{p.title}}
           </button>
         </ion-item-group>
-      </ion-list>
+      </ion-list>-->
+      <side-menu-content [settings]="sideMenuSettings" [options]="options" (change)="onOptionSelected($event)"></side-menu-content>
     </ion-content>
   </ion-menu>
 
