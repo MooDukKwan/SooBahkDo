@@ -80,6 +80,6 @@ https://ionicframework.com/docs/v1/guide/publishing.html
 3.1 Crear clave firmada keytool -genkey -v -keystore "[RUTA_PREFERIDA]\my-release-key.keystore" -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 
 # POSIBLES ERRORES
-1. SDK del Android Studio no firmado
-	1.1 Ejecutar Andorid Studio.
-	1.2 Ir a "%appdata%\..\Local\Android\Sdk\tools\bin" y ejecutar "sdkmanager --licenses"
+- Licencia SDK del Android Studio no firmado
+	1. Ejecutar Andorid Studio.
+	2. Ejecutar "cd %appdata%\..\Local\Android\Sdk\tools\bin". Ejecutar "sdkmanager --licenses"

@@ -32,7 +32,7 @@ import { CuartoGupPage } from '../pages/_subpages/cinturonVerde/cuartoGup/cuarto
 import { TerceroGupPage } from '../pages/_subpages/cinturonRojo/terceroGup/terceroGup';
 import { SegundoGupPage } from '../pages/_subpages/cinturonRojo/segundoGup/segundoGup';
 import { PrimerGupPage } from '../pages/_subpages/cinturonRojo/primerGup/primerGup';
-import { PrimerDanPage } from  '../pages/_subpages/cinturonAzul/primerDan/primerDan';
+import { PrimerDanPage } from '../pages/_subpages/cinturonAzul/primerDan/primerDan';
 
 
 @NgModule({

@@ -1,4 +1,4 @@
-<div *ngIf="true; else requestPassword">
+<div *ngIf="isLogged; else requestPassword">
   <!-- MENU IZQUIERDO -->
   <ion-menu id="leftMenu" [content]="content" side="left" type="overlay">
     <ion-header>
@@ -26,19 +26,6 @@
     </ion-header>
 
     <ion-content>
-      <!--
-      <ion-list id="sidenav">
-        <button ion-item (click)="menuItemHandler()">
-          Cinturón blanco
-        </button>
-        <ion-item-group submenu [class.visible]="showSubmenu">
-            
-          <button menuClose="rightMenu" ion-item *ngFor="let p of pagesRight" [class.activeHighlight]="checkActive(p)"
-            (click)="openPage(p)">
-            {{p.title}}
-          </button>
-        </ion-item-group>
-      </ion-list>-->
       <side-menu-content [settings]="sideMenuSettings" [options]="options" (change)="onOptionSelected($event)"></side-menu-content>
     </ion-content>
   </ion-menu>
@@ -47,11 +34,20 @@
   <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
 </div>
 
+<!-- LOGIN -->
 <ng-template #requestPassword>
-  <form (ngSubmit)="checkPassword()">
+
+  <div class="centrado">
+      <h1><b>Moo Duk Kwan</b></h1>      
+      <p>
+        <img src="../assets/imgs/logo-sbd.png" alt="">
+      </p>
+  </div>
+
+  <form (ngSubmit)="iniciarSesion()">
     <ion-item>
-      <ion-label color="primary" stacked>Stacked Label</ion-label>
-      <ion-input name="password" [(ngModel)]="password" type="password" placeholder="Password Input"></ion-input>
+      <ion-label color="primary" floating>Contraseña</ion-label>
+      <ion-input name="password" [(ngModel)]="myPassword" type="password"></ion-input>
     </ion-item>
     <button ion-button type="submit" block>Aceptar</button>
   </form>

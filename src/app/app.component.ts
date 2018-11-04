@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, MenuController } from 'ionic-angular';
+import { Nav, Platform, MenuController, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -30,7 +30,7 @@ import { CuartoGupPage } from '../pages/_subpages/cinturonVerde/cuartoGup/cuarto
 import { TerceroGupPage } from '../pages/_subpages/cinturonRojo/terceroGup/terceroGup';
 import { SegundoGupPage } from '../pages/_subpages/cinturonRojo/segundoGup/segundoGup';
 import { PrimerGupPage } from '../pages/_subpages/cinturonRojo/primerGup/primerGup';
-import { PrimerDanPage } from  '../pages/_subpages/cinturonAzul/primerDan/primerDan';
+import { PrimerDanPage } from '../pages/_subpages/cinturonAzul/primerDan/primerDan';
 
 
 @Component({
@@ -42,9 +42,15 @@ export class MyApp {
   // Declaración de variables
   rootPage: any = InicioPage;
   pagesLeft: Array<{ title: string, component: any }>;
-  //pagesRight: Array<{ title: string, component: any }>;
   activePageLeft: any;
-  //activePageRight: any;
+
+  // LOGIN
+  isLogged: boolean = false;
+  myPassword: string = "";
+  blanco: boolean = false;
+  verde: boolean = false;
+  rojo: boolean = false;
+  azul: boolean = false;
 
   @ViewChild(SideMenuContentComponent) sideMenu: SideMenuContentComponent;
   public options: Array<SideMenuOption>;
@@ -54,12 +60,7 @@ export class MyApp {
     selectedOptionClass: 'active-option'
   }
 
-  // showSubmenu: boolean = false;
-
-  password: string = "";
-  passwordValue: boolean = false;
-
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private menuController: MenuController) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private menuController: MenuController, private alertController: AlertController) {
     this.initializeApp();
   }
 
@@ -69,7 +70,6 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.inicializarMenus();
     });
   }
 
@@ -87,80 +87,83 @@ export class MyApp {
       { title: 'Sip Sam Se', component: SipSamSePage }
     ];
 
-    /*this.pagesRight = [
-      { title: 'Moo Pal Dan Kum', component: MooPalDanKumPage },
-      { title: 'Ki Cho Soo Gui', component: KiChoSooGuiPage }
-    ];*/
-
     this.activePageLeft = this.pagesLeft[0];
 
     // SUBMENUS
     this.options = new Array<SideMenuOption>();
 
-    this.options.push({
-      displayText: 'Cinturón blanco',
-      suboptions: [
-        {
-          displayText: '10º GUP',
-          component: DecimoGupPage
-        },
-        {
-          displayText: '9º GUP',
-          component: NovenoGupPage
-        },
-        {
-          displayText: '8º GUP',
-          component: OctavoGupPage
-        },
-        {
-          displayText: '7º GUP',
-          component: SeptimoGupPage
-        }
-      ]
-    });
-    this.options.push({
-      displayText: 'Cinturón verde',
-      suboptions: [
-        {
-          displayText: '6º GUP',
-          component: SextoGupPage
-        },
-        {
-          displayText: '5º GUP',
-          component: QuintoGupPage
-        },
-        {
-          displayText: '4º GUP',
-          component: CuartoGupPage
-        }
-      ]
-    });
-    this.options.push({
-      displayText: 'Cinturón rojo',
-      suboptions: [
-        {
-          displayText: '3º GUP',
-          component: TerceroGupPage
-        },
-        {
-          displayText: '2º GUP',
-          component: SegundoGupPage
-        },
-        {
-          displayText: '1º GUP',
-          component: PrimerGupPage
-        }
-      ]
-    });
-    this.options.push({
-      displayText: 'Cinturón azul',
-      suboptions: [
-        {
-          displayText: '1º Dan',
-          component: PrimerDanPage
-        }
-      ]
-    });
+    if (this.blanco) {
+      this.options.push({
+        displayText: 'Cinturón blanco',
+        suboptions: [
+          {
+            displayText: '10º GUP',
+            component: DecimoGupPage
+          },
+          {
+            displayText: '9º GUP',
+            component: NovenoGupPage
+          },
+          {
+            displayText: '8º GUP',
+            component: OctavoGupPage
+          },
+          {
+            displayText: '7º GUP',
+            component: SeptimoGupPage
+          }
+        ]
+      });
+    }
+    if (this.verde) {
+      this.options.push({
+        displayText: 'Cinturón verde',
+        suboptions: [
+          {
+            displayText: '6º GUP',
+            component: SextoGupPage
+          },
+          {
+            displayText: '5º GUP',
+            component: QuintoGupPage
+          },
+          {
+            displayText: '4º GUP',
+            component: CuartoGupPage
+          }
+        ]
+      });
+    }
+    if (this.rojo) {
+      this.options.push({
+        displayText: 'Cinturón rojo',
+        suboptions: [
+          {
+            displayText: '3º GUP',
+            component: TerceroGupPage
+          },
+          {
+            displayText: '2º GUP',
+            component: SegundoGupPage
+          },
+          {
+            displayText: '1º GUP',
+            component: PrimerGupPage
+          }
+        ]
+      });
+    }
+    if (this.azul) {
+      this.options.push({
+        displayText: 'Cinturón azul',
+        suboptions: [
+          {
+            displayText: '1º Dan',
+            component: PrimerDanPage
+          }
+        ]
+      });
+    }
   }
 
   public onOptionSelected(option: SideMenuOption): void {
@@ -181,30 +184,50 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
     this.activePageLeft = page;
-    //this.activePageRight = page;
   }
 
   public checkActive(page) {
     // https://www.joshmorony.com/create-a-menu-with-active-page-highlight-in-ionic-2/
     if (page == this.activePageLeft) {
       return page;
-    } else {
-      // return page == this.activePageRight;
     }
   }
 
-  /*menuItemHandler(): void {
-    this.showSubmenu = !this.showSubmenu;
-  }*/
+  public iniciarSesion() {
 
-
-  public authenticated() {
-    return this.passwordValue;
-  }
-
-  public checkPassword() {
-    if (this.password == "admin") {
-      this.passwordValue = true;
+    switch (this.myPassword) {
+      case "blanco":
+        this.blanco = true;
+        break;
+      case "verde":
+        this.blanco = true;
+        this.verde;
+        break;
+      case "rojo":
+        this.blanco = true;
+        this.verde = true;
+        this.rojo = true;
+        break;
+      case "azul":
+        this.verde = true;
+        this.blanco = true;
+        this.rojo = true;
+        this.azul = true;
+        break;
+      default:
+        break;
+    }
+    if (this.blanco != false || this.verde != false || this.rojo != false || this.azul != false) {
+      this.isLogged = true;
+      this.inicializarMenus();
+    } else {
+      let myAlert = this.alertController.create({
+        title: "Moo Duk Kwan",
+        subTitle: "Contraseña incorrecta.",
+        buttons: ['Intentar de nuevo']
+      });
+      myAlert.present();
+      this.myPassword = "";
     }
   }
 }
