@@ -201,7 +201,7 @@ export class MyApp {
         break;
       case "verde":
         this.blanco = true;
-        this.verde;
+        this.verde = true;
         break;
       case "rojo":
         this.blanco = true;
